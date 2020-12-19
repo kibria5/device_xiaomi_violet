@@ -209,6 +209,12 @@ on early-boot
 on boot
     chown system system /sys/class/thermal/thermal_message/sconfig
     write /sys/class/thermal/thermal_message/sconfig 10
+    
+    # SMART CHARGING
+    chown system system /sys/class/power_supply/battery/charging_enabled
+    chmod 0666 /sys/class/power_supply/battery/charging_enabled
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
 
     # Change owner of white led
     chown system system /sys/class/leds/white/brightness
