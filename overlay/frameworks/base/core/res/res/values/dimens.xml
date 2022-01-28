@@ -26,4 +26,8 @@
 
     <!-- Height of the status bar in portrait -->
     <dimen name="status_bar_height">80.0px</dimen>
+
+    <!-- Padding around the status bar -->
+    <dimen name="rounded_corner_content_padding">36px</dimen>
+
 </resources>
