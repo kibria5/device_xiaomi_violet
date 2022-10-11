@@ -20,4 +20,9 @@
          3 = right side
     -->
     <integer name="config_fingerprintSensorLocation">0</integer>
+
+    <!-- Maintainer info -->
+    <string name="config_maintainer_name" translatable="false">𝒌𝒊𝒃𝒓𝒊𝒂5</string>
+    <string name="config_maintainer_link"  translatable="false">https://t.me/kibria5</string>
+
 </resources>

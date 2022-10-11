@@ -8,11 +8,18 @@
 # Inherit from violet device
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
-# Inherit some common SuperiorOS stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
-
 # Inherit ANX Camera
 #$(call inherit-product, vendor/ANXCamera/config.mk)
+
+# OTA updater.
+CUSTOM_BUILD_TYPE := Official
+
+
+# Project Zephyrua stuff.
+IS_PHONE := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+WITH_GMS := true
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -21,7 +28,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_PIXEL_CHARGER := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := arrow_violet
+PRODUCT_NAME := violet
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
