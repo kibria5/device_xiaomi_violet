@@ -156,6 +156,8 @@ on init
     write /dev/cpuset/application/performance/cpus 0-7
     write /dev/cpuset/application/background/cpus 0-7
     write /dev/cpuset/application/cpus 0-7
+    write /dev/sys/fs/by-name/userdata/data_io_flag 56
+    write /dev/sys/fs/by-name/userdata/node_io_flag 56
 
 on fs
     mount_all /vendor/etc/fstab.qcom --early
@@ -508,6 +510,8 @@ on property:sys.boot_completed=1
     write /sys/block/sda/queue/iostats 0
     write /sys/block/sde/queue/nr_requests 128
     write /sys/block/sde/queue/iostats 0
+    write /dev/sys/fs/by-name/userdata/data_io_flag 8
+    write /dev/sys/fs/by-name/userdata/node_io_flag 8
     
     # Enable suspend to RAM
     write /sys/power/mem_sleep "deep"
