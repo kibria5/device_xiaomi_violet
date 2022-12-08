@@ -1,6 +1,5 @@
 #
 # Copyright (C) 2019-2020 The LineageOS Project
-# Copyright (C) 2018-2020 The SuperiorOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,11 +7,18 @@
 # Inherit from violet device
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
-# Inherit some common SuperiorOS stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common Banana stuff.
+$(call inherit-product, vendor/banana/config/common.mk)
 
 # Inherit ANX Camera
 #$(call inherit-product, vendor/ANXCamera/config.mk)
+
+# Banana Ify
+BANANA_MAINTAINER := kibria5
+BANANA_BUILD_TYPE := OFFICIAL
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_USES_BLUR := true
+TARGET_SUPPORTS_QUICK_TAP := true
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -21,7 +27,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_PIXEL_CHARGER := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := arrow_violet
+PRODUCT_NAME := banana_violet
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
