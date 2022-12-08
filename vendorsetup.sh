@@ -18,7 +18,7 @@ git clone https://github.com/kibria5/android_vendor_xiaomi_violet.git -b thirtee
 
 echo 'Cloning Kernel tree [3/4]'
 # Kernel Tree
-git clone https://github.com/rdx420/kernel_xiaomi_violet_A12.git -b twelve kernel/xiaomi/violet
+git clone https://github.com/kibria5/android_kernel_xiaomi_violet.git -b thirteen kernel/xiaomi/violet
 
 echo 'Cloning Proton clang [4/4]'
 # Proton Clang
