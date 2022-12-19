@@ -25,8 +25,8 @@ WITH_GMS := true
 
 # Supported Device Flags. (Features)
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_QUICK_TAP := false
-TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_ENABLE_BLUR := false
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
