@@ -11,6 +11,9 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 # Inherit some common PixelExtended stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# Inherit PixelLauncher
+$(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
+
 # Inherit ANX Camera
 #$(call inherit-product, vendor/ANXCamera/config.mk)
 
@@ -21,6 +24,7 @@ TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 PEX_BUILD_TYPE=OFFICIAL
 IS_PHONE := true
+ICONS_VARIANT := true
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
