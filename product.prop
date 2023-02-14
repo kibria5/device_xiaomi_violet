@@ -70,6 +70,9 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 # Incremental FS
 ro.incremental.enable=1
 
+# Fast mass storage
+ro.vold.umsdirtyratio=20
+
 # LMKD
 ro.config.low_ram=false
 
