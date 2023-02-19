@@ -159,6 +159,10 @@ on init
     write /dev/sys/fs/by-name/userdata/data_io_flag 56
     write /dev/sys/fs/by-name/userdata/node_io_flag 56
 
+    # report max frequency to unity tasks.
+    write /proc/sys/kernel/sched_lib_name "libunity.so,com.miHoYo.,libfb.so,liblogic.so,libssgamesdkcronet.so,libil2cpp.so,com.activision.,com.tencent."
+    write /proc/sys/kernel/sched_lib_mask_force 255
+
 on fs
     mount_all /vendor/etc/fstab.qcom --early
     chown root system /mnt/vendor/persist
