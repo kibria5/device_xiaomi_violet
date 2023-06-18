@@ -545,4 +545,10 @@
 
     <!-- Maximum velocity to initiate a fling, as measured in dips per second. -->
     <dimen name="config_viewMaxFlingVelocity">12000dp</dimen>
+
+  <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
+  <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/qcom-battery/restrict_chg</string>
+
+  <!-- Expected value from fast charging status file  -->
+  <string name="config_oemFastChargerStatusValue" translatable="false">0</string>
 </resources>
