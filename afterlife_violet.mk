@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2018-2020 The LineageOS Project
-# Copyright (C) 2020 The PixelExperience Project
+# Copyright (C) 2020 The AfterLife Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -9,18 +9,26 @@
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
 # Inherit some common SuperiorOS stuff.
-$(call inherit-product, vendor/superior/config/common.mk)
-SUPERIOR_OFFICIAL := true
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_INCLUDE_MATLOG := true
-TARGET_INCLUDE_PIXEL_CHARGER := true
-USE_MOTO_CALCULATOR := true
+
+# AfterLife flags
+AFTERLIFE_MAINTAINER := kibria5
+
+# FaceUnlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Blur 
+TARGET_SUPPORTS_BLUR := false
+
+# Pixel Charging
+USE_PIXEL_CHARGING := true
 
 # MiuiCamera
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := superior_violet
+PRODUCT_NAME := afterlife_violet
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
