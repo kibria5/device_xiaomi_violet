@@ -89,6 +89,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl:32 \
     android.hardware.audio.service \
+    android.hardware.audio.sounddose-vendor-impl \
     android.hardware.audio@7.1-impl:32 \
     audio.primary.sm6150:32 \
     audio.r_submix.default \
@@ -230,7 +231,10 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     libbatching \
     libgeofencing \
-    libgnss
+    libgnss \
+    libloc_net_iface \
+    libloc_net_iface.vendor \
+    liblocdiagiface
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/gps/etc/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -317,7 +321,8 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw
+    libstagefrighthw \
+    libstagefright_softomx_plugin.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
