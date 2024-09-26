@@ -13,7 +13,6 @@ $(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
 AFTERLIFE_GAPPS := true
-GAPPS_FULL := true
 
 # AfterLife flags
 AFTERLIFE_MAINTAINER := kibria5
